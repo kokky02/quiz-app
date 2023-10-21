@@ -65,7 +65,7 @@ const questions = [
 ]
 
 const questionElement = document.getElementById('question')
-const answerButton = document.getElementById('answer-button')
+const answerButtons = document.getElementById('answer-button')
 const nextButton = document.getElementById('next-btn')
 
 let currentQuestionIndex = 0
@@ -79,6 +79,7 @@ function startQuiz(){
 }
 
 function showQuestion(){
+     resetState()
      let currentQuestion = questions[currentQuestionIndex]
      let questionNo = currentQuestionIndex + 1
      questionElement.innerHTML = questionNo + '. ' + currentQuestion.question
@@ -87,8 +88,17 @@ function showQuestion(){
           const button = document.createElement('button')
           button.innerHTML = answer.text
           button.classList.add('btn')
-          answerButton.appendChild(button)
+          answerButtons.appendChild(button)
      })
 }
+
+function resetState(){
+     nextButton.style.display = 'none'
+     while(answerButtons.firstChild){
+          answerButtons.removeChild(answerButtons.firstChild)
+     }
+}
+
+startQuiz()
 
 
