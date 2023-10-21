@@ -110,7 +110,7 @@ function selectAnswer(e){
           selectedBtn.classList.add('correct')
      }
      else{
-          selectedBtn.classList.add('Incorrect')
+          selectedBtn.classList.add('incorrect')
      }
 }
 
