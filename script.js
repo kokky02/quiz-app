@@ -22,7 +22,7 @@ const questions = [
           answers: [
                {text: 'Harry Potter', correct: false},
                {text: 'Draco Malfoy', correct: false},
-               {text: 'Ren Weasley', correct: false},
+               {text: 'Ron Weasley', correct: false},
                {text: 'Hermiona Grangerová', correct: true},
           ]
      },
