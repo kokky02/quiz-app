@@ -123,6 +123,14 @@ function selectAnswer(e){
      nextButton.style.display = 'block'
 }
 
+function showScore(){
+     resetState()
+     questionElement.innerHTML = `Tvé score je ${score} z ${questions.length}!`
+     nextButton.innerHTML = 'Hrát znovu'
+     nextButton.style.display = 'block'
+}    
+
+
 function handleNextButton(){
      currentQuestionIndex++
      if(currentQuestionIndex < questions.length){
